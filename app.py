@@ -7,7 +7,7 @@ import base64
 import io # Necessário para lidar com arquivos em memória do Streamlit
 
 # CONFIG: deve vir antes de chamadas st.* visíveis
-st.set_page_config(page_title="Gerenciador de Uniformes", page_icon="Gerenciador-de-uniforme-web/img/icone.png", layout="centered")
+st.set_page_config(page_title="Gerenciador de Uniformes", page_icon="img/icone.png", layout="centered")
 
 
 # Credenciais fixas
@@ -272,7 +272,7 @@ if not st.session_state["acesso_liberado"]:
     with st.form("form_login", clear_on_submit=False):
         # Assumindo que você tem um arquivo de imagem 'img/logoEmpresa.png' no ambiente
         # Se não tiver, comente a linha abaixo para evitar erro.
-        st.image("Gerenciador-de-uniforme-web/img/logoEmpresa.png", width=200) 
+        st.image("img/logoEmpresa.png", width=200) 
         st.title("Gerenciador de Uniforme BovoTech")
         usuario_log = st.text_input("Usuário")
         senha_log = st.text_input("Senha", type="password")
@@ -293,7 +293,7 @@ if st.session_state["acesso_liberado"]:
         st.rerun()
 
     df = carregar_cadastros()
-    st.image("Gerenciador-de-uniforme-web/img/logoEmpresa.png", width=300)
+    st.image("img/logoEmpresa.png", width=300)
 
     # Assumindo que você tem um arquivo de imagem 'img/logomercado.png'
     # Se não tiver, comente a linha abaixo para evitar erro.
